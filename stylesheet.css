@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #edf7fa;
+    position: relative; /* You need this line because you are positioning the .toggle-button for nav on mobile view as absolute, and absolute elements will always position themselfs inside they nearest parent with position: relative; */
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-weight: bold;
+    
+  }
+  
+  .logo img{
+    max-width: 7em;
+    max-height: 7em;
+    margin: 0%;
+    padding: 1rem;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    list-style: none;
+    gap: 1em;
+    margin: 1em;
+    font-size: large;
+  }
+  
+  .navbar-links li:hover {
+    background-color: #faf5e4;
+  }
+  
+  .navbar-links ul a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: black;
+  }
+  
+  .toggle-button{
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  /* End of NavBar */
+
+  .about-us{
+    height: 100%;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-container h1{
+    font-size: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .about-container p{
+    
+    margin-left: 20em;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+  }
+
+  /* End of About Us Section */
+  
+  .hero-image-container{
+    background-image: url(Images/Boat-4.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  .inner-container h1{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-weight: bold;
+    font-size: 5em;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  /* End of Hero Image Section */
+  
+  .card-section{
+    /* height: 100vh; /* This is causing the issue. 100vh is 100 viewport height, which means it will match the height of the current device that we are using. When we get below 600px, the boxes will go one below the other, and will for sure have bigger height then the height of the screen (bigger then 100vh). So this is why your sections overlap, because your .card-section has a fixed height of 100vh (so for example if we are on mobile that 100vh height will translate to 667px on iPhone SE for example, and your 3 .card boxes will have a height sum of 90em (1440px), because in your css you put them all to have 30em height. So your section 2 will overflow into section 3. */
+    height: 100%; /* I added this */
+    background-color: #142d4c;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+    padding: 0 32px; /* Add some padding on the sides for nicer look */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+  }
+  
+  .card{
+    background: #ececec;
+    /* width: 200em; Not good to give elements a fixed height, unless you are sure you will break them into new row before they break a screen. :) */
+    flex: 1; /* I added this line for you, it will make all the elements inside flex container strech to have the same width. */
+   /* height: 30em;  Giving fixed height is also not the best, you should always aim to have your content and padding determine the size of the box. */
+    padding-bottom: 32px; /* I added this */
+    /*margin: 1em; This will make you issues on mobile view, better use gap property that flex offers, I added it on line 100, basically what it does is makes spacings between each flex element, in our case I gave it 16px. :) It's very useful. */
+    border-radius: 5px;
+    height: 30em;
+  }
+
+  .card p{
+    padding: 1em
+  }
+
+  .card-image{
+    height: 50em;
+    margin-bottom: 15em;
+    border-radius: 5px;
+  }
+  .card-1 {
+    background-image: url(Images/Build.jpg);
+    background-size: cover;
+    height: 15em;
+    margin-bottom: 4em;
+  }
+
+  .card-2{
+    background-image: url(Images/Ordering.jpg);
+    background-size: cover;
+    height: 15em;
+    margin-bottom: 4em;
+  }
+  
+  .card-3{
+    background-image: url(Images/Boat-5.jpg);
+    background-size: cover;
+    height: 15em;
+    margin-bottom: 4em;
+  }
+  
+  /* End of Card Section */
+  
+  .section-three{
+    /* height: 100vh;  Watch out for this in case you have too much content, you will have the same issue happen again. :) */
+    height: 100%;
+    padding-top: 40px;
+    background-color: #faf5e4;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .sect-three-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5em;
+  }
+
+  .sect-three-text{
+    padding-right: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .sect-three-text h1{
+    font-size: 40px;
+  }
+
+  .sect-three-text p{
+    padding-top: 30px;
+  }
+
+  .sect-three-img img{
+    height: 25em;
+    margin-right: 5em;
+  }
+
+  .line{
+    width: 80%;
+    height: 5px;
+    margin-left: 1em;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: red;
+  }
+  
+  /* End of Section Three */
+
+
+
+  /* Media Queries */
+  
+  @media (max-width: 600px) { /* Media Query for Mobile Devices */
+    .toggle-button {
+        display: flex;
+        /* margin-right: -4em; No need for this */
+        right: 16px; /* This might be better. :) */
+    }
+  
+    .navbar-links {
+       display: none; 
+       width: 60%;
+    }
+  
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+  
+    .navbar-links li{
+        text-align: center;
+    }
+  
+    .navbar-links li a {
+        padding: .5em;
+    }
+  
+    .hero-image-container{
+        /*width: 117%; // Not good to give width more then 100% to anything as it will surely overflow the container. */
+        width: 100%;
+    }
+  
+    .navbar-links.active {
+        display: flex;
+    }
+    
+    .image-container {
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        /*width: 52vh; // Try to use width in % instead of vh. Also, you can't even use vh, because that is viewport height, but you can use vw, which is viewport width. :) */
+    }
+  
+    .image-title{
+        font-size: 1em;
+    }
+
+    /* End of Hero Image Section */
+
+    .about-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .about-container h1{
+      font-size: 35px;
+    }
+
+    .about-container p{
+      margin-top: 25px;
+      font-size: 17px;
+      margin-left: 2px;
+    }
+
+    /* End of About Container */
+  
+    .carousel-items img{
+        height: 10em;
+    }
+  
+    .card-section{
+        /*padding-top: 30em;*/
+        flex-direction: column;
+        height: unset;
+    }
+    
+    .card{
+        background: #faf5e4;
+        /*width: 24em;*/
+        width: 100%;
+    }
+
+    .sect-three-img img{
+        height: 8em;
+      }
+
+    .sect-three-container{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sect-three-container{
+        margin-right: 4em;
+    }
+
+    .sect-three-text h1 {
+        font-size: 35px;
+    }
+
+    .sect-three-img img{
+        height: 15em;
+        margin-left: 4em;
+        margin-top: 3em;
+    }
+
+
+  }
