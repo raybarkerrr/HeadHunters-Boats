@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: center;
     background: #edf7fa;
-    position: relative; /* You need this line because you are positioning the .toggle-button for nav on mobile view as absolute, and absolute elements will always position themselfs inside they nearest parent with position: relative; */
+    position: relative;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -130,14 +130,13 @@
   /* End of Hero Image Section */
   
   .card-section{
-    /* height: 100vh; /* This is causing the issue. 100vh is 100 viewport height, which means it will match the height of the current device that we are using. When we get below 600px, the boxes will go one below the other, and will for sure have bigger height then the height of the screen (bigger then 100vh). So this is why your sections overlap, because your .card-section has a fixed height of 100vh (so for example if we are on mobile that 100vh height will translate to 667px on iPhone SE for example, and your 3 .card boxes will have a height sum of 90em (1440px), because in your css you put them all to have 30em height. So your section 2 will overflow into section 3. */
-    height: 100%; /* I added this */
+    height: 100%;
     background-color: #142d4c;
     display: flex;
     justify-content: center;
     gap: 16px;
     text-align: center;
-    padding: 0 32px; /* Add some padding on the sides for nicer look */
+    padding: 0 32px;
     padding-top: 100px;
     padding-bottom: 100px;
     font-family: 'Open Sans', sans-serif;
@@ -147,11 +146,8 @@
   
   .card{
     background: #ececec;
-    /* width: 200em; Not good to give elements a fixed height, unless you are sure you will break them into new row before they break a screen. :) */
-    flex: 1; /* I added this line for you, it will make all the elements inside flex container strech to have the same width. */
-   /* height: 30em;  Giving fixed height is also not the best, you should always aim to have your content and padding determine the size of the box. */
-    padding-bottom: 32px; /* I added this */
-    /*margin: 1em; This will make you issues on mobile view, better use gap property that flex offers, I added it on line 100, basically what it does is makes spacings between each flex element, in our case I gave it 16px. :) It's very useful. */
+    flex: 1; 
+    padding-bottom: 32px; 
     border-radius: 5px;
     height: 30em;
   }
@@ -187,9 +183,34 @@
   }
   
   /* End of Card Section */
-  
+
+  .our-photos-section{
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50em;
+    margin-left: 50em;
+  }
+
+  .row img {
+    height: 18em;
+    width: auto;
+  }
+
+  .row-text{
+    display: flex;
+    
+  }
+
+  /* End of Our Photos Section */
+
   .section-three{
-    /* height: 100vh;  Watch out for this in case you have too much content, you will have the same issue happen again. :) */
     height: 100%;
     padding-top: 40px;
     background-color: #faf5e4;
@@ -217,6 +238,7 @@
 
   .sect-three-text p{
     padding-top: 30px;
+    margin-right: 30em;
   }
 
   .sect-three-img img{
@@ -225,7 +247,7 @@
   }
 
   .line{
-    width: 80%;
+    width: 50%;
     height: 5px;
     margin-left: 1em;
     border-radius: 50px;
@@ -237,14 +259,12 @@
   /* End of Section Three */
 
 
-
   /* Media Queries */
   
   @media (max-width: 600px) { /* Media Query for Mobile Devices */
     .toggle-button {
         display: flex;
-        /* margin-right: -4em; No need for this */
-        right: 16px; /* This might be better. :) */
+        right: 16px; 
     }
   
     .navbar-links {
@@ -271,7 +291,6 @@
     }
   
     .hero-image-container{
-        /*width: 117%; // Not good to give width more then 100% to anything as it will surely overflow the container. */
         width: 100%;
     }
   
@@ -285,7 +304,6 @@
         justify-content: center;
         align-items: center;
         
-        /*width: 52vh; // Try to use width in % instead of vh. Also, you can't even use vh, because that is viewport height, but you can use vw, which is viewport width. :) */
     }
   
     .image-title{
@@ -318,14 +336,12 @@
     }
   
     .card-section{
-        /*padding-top: 30em;*/
         flex-direction: column;
         height: unset;
     }
     
     .card{
         background: #faf5e4;
-        /*width: 24em;*/
         width: 100%;
     }
 
@@ -353,6 +369,5 @@
         margin-left: 4em;
         margin-top: 3em;
     }
-
 
   }
