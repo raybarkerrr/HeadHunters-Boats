@@ -184,32 +184,6 @@
   
   /* End of Card Section */
 
-  .our-photos-section{
-    height: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50em;
-    margin-left: 50em;
-  }
-
-  .row img {
-    height: 18em;
-    width: auto;
-  }
-
-  .row-text{
-    display: flex;
-    
-  }
-
-  /* End of Our Photos Section */
-
   .section-three{
     height: 100%;
     padding-top: 40px;
@@ -255,6 +229,35 @@
     margin-bottom: 20px;
     background-color: red;
   }
+
+  /* End of Our Photos Section */
+
+  .our-photos-section{
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50em;
+    margin-left: 50em;
+  }
+
+  .row img {
+    height: 18em;
+    width: auto;
+  }
+
+  .row-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+  }
+
   
   /* End of Section Three */
 
@@ -345,6 +348,8 @@
         width: 100%;
     }
 
+    /* End of Card Section */
+
     .sect-three-img img{
         height: 8em;
       }
@@ -361,13 +366,74 @@
     }
 
     .sect-three-text h1 {
-        font-size: 35px;
+        font-size: 20px;
+        margin-left: 6em;
     }
 
     .sect-three-img img{
         height: 15em;
         margin-left: 4em;
         margin-top: 3em;
+    }
+
+    .line{
+      width: 40%;
+      height: 5px;
+      margin-left: 10em;
+      border-radius: 50px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      background-color: red;
+    }
+
+    .our-photos-section{
+      height: 100%;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    /* End of Section Three */
+  
+    
+
+  }
+
+  @media (min-width: 1024px) { /* Media Query for Laptops */
+
+    .sect-three-text p{
+      padding-top: 10px;
+      margin-right: 10em;
+    }
+
+    .line{
+      width: 80%;
+      height: 5px;
+      margin-left: 1em;
+      border-radius: 50px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      background-color: red;
+    }
+
+      /* End of Section Three */    
+      .row{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 40em;
+      margin-left: 40em;
+    }
+  
+    .row img{
+      height: 15em;
+      width: auto;
+    }
+  
+    .row-text{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20px;
     }
 
   }
