@@ -8,6 +8,30 @@
   body {
     max-width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  .foot{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    height: 100%;
+    background-color: #142d4c;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+  }
+
+  .fut h1 p{
+    font-size: 20px;
+  }
+
+  .fut{
+    margin-left: 20px;
+  }
+
+  .fut-two{
+    margin-right: 20px;
   }
   
   .navbar{
@@ -24,8 +48,8 @@
   }
   
   .logo img{
-    max-width: 7em;
-    max-height: 7em;
+    max-width: 10em;
+    max-height: 10em;
     margin: 0%;
     padding: 1rem;
   }
