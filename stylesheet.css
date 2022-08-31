@@ -10,29 +10,6 @@
     overflow-x: hidden;
     scroll-behavior: smooth;
   }
-
-  .foot{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    height: 100%;
-    background-color: #142d4c;
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Source Sans Pro', Arial, sans-serif;
-  }
-
-  .fut h1 p{
-    font-size: 20px;
-  }
-
-  .fut{
-    margin-left: 20px;
-  }
-
-  .fut-two{
-    margin-right: 20px;
-  }
   
   .navbar{
     display: flex;
@@ -130,10 +107,11 @@
   .hero-image-container{
     background-image: url(Images/Boat-4.jpg);
     height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-attachment: fixed;
+    background-position: center;
   }
   
   .inner-container h1{
@@ -254,7 +232,7 @@
     background-color: red;
   }
 
-  /* End of Our Photos Section */
+   /* End of Section Three */
 
   .our-photos-section{
     height: 100%;
@@ -266,8 +244,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 50em;
-    margin-left: 50em;
   }
 
   .row img {
@@ -275,16 +251,30 @@
     width: auto;
   }
 
-  .row-text{
+  /* End of Our Photos Section */
+
+  .foot{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
+    justify-content: space-between;
+    margin-top: 50px;
+    height: 100%;
+    background-color: #142d4c;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
   }
 
-  
-  /* End of Section Three */
+  .fut h1 p{
+    font-size: 20px;
+  }
 
+  .fut{
+    margin-left: 20px;
+  }
+
+  .fut-two{
+    margin-right: 20px;
+  }
 
   /* Media Queries */
   
@@ -320,6 +310,8 @@
     .navbar-links.active {
         display: flex;
     }
+
+    /* End of Navbar Section */
     
     .image-container {
         font-size: 10px;
@@ -343,6 +335,7 @@
     }
 
     .about-container h1{
+      
       font-size: 35px;
     }
 
@@ -353,10 +346,6 @@
     }
 
     /* End of About Container */
-  
-    .carousel-items img{
-        height: 10em;
-    }
   
     .card-section{
         flex-direction: column;
@@ -386,12 +375,14 @@
     }
 
     .sect-three-text p {
-      margin-right: 4em;
-      
+      padding-top: 10px;
+      padding-bottom: 20px;
+      margin-right: 1em;
   }
 
     .sect-three-img img{
         height: 15em;
+        margin-right: 1em;
 
     }
 
@@ -409,54 +400,20 @@
     .our-photos-section{
       height: 100%;
       padding-top: 100px;
-      padding-bottom: 100px;
+      padding-bottom: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
-    .our-photos-section img{
+    .row{
       flex-direction: column;
       display: flex;
-      
-    }
-
-  
-  
-
-  @media (max-width: 1600px) { /* Media Query for Laptops */
-
-    .sect-three-text p{
-      padding-top: 10px;
-      margin-right: 10em;
-    }
-
-    .line{
-      width: 80%;
-      height: 5px;
-      margin-left: 1em;
-      border-radius: 50px;
-      margin-top: 50px;
-      margin-bottom: 20px;
-      background-color: red;
-    }
-
-      /* End of Section Three */    
-      .row{
-      display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 40em;
-      margin-left: 40em;
     }
-  
-    .row img{
+
+    .row-image img{
       height: 15em;
-      width: auto;
     }
-  
-    .row-text{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 20px;
-    }
-
+    
   }
